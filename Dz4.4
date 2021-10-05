@@ -1,0 +1,87 @@
+#include<iostream>
+
+enum class month
+{
+ January, 
+ February,
+ March,
+ April,
+ May,
+ June,
+ July,
+ August,
+ September,
+ October,
+ November,
+ December
+ 
+};
+
+void func(month M)
+{
+   switch(M)
+   {
+       case month::January:
+       std::cout << "31 день";
+       break;
+       
+       case month::February:
+       std::cout << "28 дней";
+       break;
+       
+       case month::March:
+       std::cout << "31 день";
+       break;
+       
+       case month::April:
+       std::cout << "30 дней";
+       break;
+       
+       case month::May:
+       std::cout << "31 день";
+       break;
+       
+       case month::June:
+       std::cout << "30 дней";
+       break;
+       
+       case month::July:
+       std::cout << "31 день";
+       break;
+      
+       case month::August:
+       std::cout << "31 день";
+       break;
+       
+       case month::September:
+       std::cout << "30 дней";
+       break;
+       
+       case month::October:
+       std::cout << "31 день";
+       break;
+       
+       case month::November:
+       std::cout << "30 дней";
+       break;
+       
+       case month::December:
+       std::cout << "31 день";
+       break;
+       
+       default:
+       std::cout << "Фигню несешь!";
+       break;
+   }
+}
+
+int main()
+{
+    int a;
+    std::cout << "Введите номер месяца: ";
+    std::cin >> a;
+    month M = static_cast<month>(a-1);
+    func(M);
+
+    return 0;
+}
